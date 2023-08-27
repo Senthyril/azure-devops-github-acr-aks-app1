@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: senthyrilazuredevopsgithubacraksapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: senthyrilazuredevopsgithubacraksapp
+  template:
+    metadata:
+      labels:
+        app: senthyrilazuredevopsgithubacraksapp 
+    spec:
+      containers:
+        - name: senthyrilazuredevopsgithubacraksapp 
+          image: aksdevopsacr88.azurecr.io/senthyrilazuredevopsgithubacraksapp
+          ports:
+          - containerPort: 80
